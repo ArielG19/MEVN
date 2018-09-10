@@ -1,0 +1,9 @@
+1. ir archivos de programas, carpeta mongodb,server,4.0,bin.
+2. shift + click derecho abrimos consola para probar el comando ./mongod.
+3. copiar la ruta (C:\Program Files\MongoDB\Server\4.0\bin)
+4. ir a este equipo y propiedades.
+5. configuracion avanzada del sistema
+6. agregar variable de entorno, seleccionar path, editar, nuevo y pegar direccion
+7. ya en este punto el comando funciona desde cualquier punto, pero debemos agragar las siguientes
+carpetas en C: primero data,db.
+listo ya tenemos mongodb !!!

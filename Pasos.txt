@@ -1,0 +1,18 @@
+1. iniciar nuestro proyecto creando nuestro package con npm init
+2. installar las dependencias, express, body-parser(para permitir el formato json), 
+mongoose,morgan(ver en consala las peticiones get,put..)
+con el comando npm i express body-parser mongoose morgan.
+2.1 intalar cors que es un midlewore, con npm i cors
+3. crear un archivo js para el server
+4. iniciar bd en mongodb escibir comando mongod
+5.crear todas las carpetas necesaria para elproyecto.
+6. levantamos el server con el comando
+node src/server.js o donde este ubicado el servidor
+7. instalar dependecias para desarrollo: npm i webpack axios vue-axios vue vue-router vue-loader
+vue-template-compiler babel-core babel-loader css-loader -D (Investiga las desconocidas wey)
+8.configurar webpack
+9. en nuestro package.json agragamos en script "build":"webpack" para poder correrlo con npm run build
+10. me toco reinstalar webpack por q tenia un error con este comando funciono npm install webpack-command --save-dev
+11. creamos un comando personalizado en los script para arrancar el servidor npm start
+12. para que no de error de conexion con la bd de mongo hay que mantener la conexion abierta
+13. utilizar los package actualizados o que considan con la version.
