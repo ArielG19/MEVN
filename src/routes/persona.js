@@ -4,7 +4,15 @@ const router = express.Router();
 //aqui utilizamos las rutas pero con los modelos
 const Persona = require('../models/persona');
 
-//ruta get para obtener datos
+//cremos una ruta get que busca por id para obtener los datos.
+router.get('/:id',(req,res, next) => {
+	//creamos nuestra consulta
+	Persona.findById(req.params.id, function(err,persona){
+		res.json(persona);
+	})
+});
+
+//-------------------------ruta get para obtener datos-----------------------------
 //probamos nuestra ruta con un mensaje.
 router.get('/',(req,res)=>{
 	//creamos nuestra consulta
@@ -23,7 +31,7 @@ router.get('/',(req,res)=>{
 	});*/
 });
 
-//ruta post para guardar
+//------------------------ruta post para guardar-----------------------------------------------------------
 router.post('/',(req,res)=>{
 	//creamos un nuevo modelos de datos
 	//recibimos lo que el cliente envia atravez de req.body
@@ -39,7 +47,7 @@ router.post('/',(req,res)=>{
 
 });
 
-//ruta put para actualizar
+//-----------------------ruta put para actualizar--------------------------------------------------------------------------------
 router.put('/:id',(req, res, next)=>{
 	//creamos una consulta a la bd y buscamos por id que estamos recibiendo
 	//en la colsulta optenemos un error, o la consulta.
@@ -65,11 +73,11 @@ router.put('/:id',(req, res, next)=>{
 
 });
 
-//ruta delete para eliminar
-router.put('/:id',(req, res, next)=>{
+//---------------------ruta delete para eliminar--------------------------------------------------------------------------------
+router.delete('/:id',(req, res, next)=>{
 	//creamos una consulta a la bd y buscamos por id que estamos recibiendo
 	//en la colsulta optenemos un error, o la consulta.
-	Persona.findByIdAndRemove(req.params.id, function(err,persona){
+	Persona.findOneAndDelete(req.params.id, function(err,persona){
 		if(err){
 			res.json(err);
 		}else{

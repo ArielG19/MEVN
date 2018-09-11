@@ -16,3 +16,8 @@ vue-template-compiler babel-core babel-loader css-loader -D (Investiga las desco
 11. creamos un comando personalizado en los script para arrancar el servidor npm start
 12. para que no de error de conexion con la bd de mongo hay que mantener la conexion abierta
 13. utilizar los package actualizados o que considan con la version.
+
+Bundle.js - es para tener el codigo minificado
+main.js - para inportar vue y demas componentes y montarlos el #app
+app.vue - es donde unificamos nuestros componetes en uno solo atravez de vue-router.
+webpack- se encarga de minificar e de interpretar los codigos.
